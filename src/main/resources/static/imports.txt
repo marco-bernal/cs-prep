@@ -1,0 +1,51 @@
+### Java
+import java.util.*;
+import java.util.stream.Stream;
+
+import static java.lang.String.format;
+import static java.util.stream.Collectors.toList;
+
+### Spring
+(Repo, Service)
+import org.springframework.stereotype.*;
+
+(Controller)
+import org.springframework.web.bind.annotation.*;
+
+### Validation JavaX
+import javax.validation.constraints.NotBlank; (PoJo)
+import javax.validation.Valid;  (Controller)
+
+### Tests
+(All)
+import org.junit.jupiter.api.*;
+
+import static org.assertj.core.api.Assertions.*;
+
+(Service, Controller)
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+(Service)
+import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+(Controller)
+import org.springframework.http.MediaType;
+
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.servlet.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.*;
+import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
+
+/**
+ * Used only for parametrized tests
+ */
+import org.junit.jupiter.params.*;
+import org.junit.jupiter.params.provider.*;
