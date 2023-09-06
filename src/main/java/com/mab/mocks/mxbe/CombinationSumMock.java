@@ -39,7 +39,7 @@ public class CombinationSumMock {
 
    public List<int[]> getCombinations(int[] values, int target) {
        int tmp = 0;
-       int[] res = new int[values.length];
+       int[] aggregatedRes = new int[values.length];
        List<int[]> result = new ArrayList<>();
 
        for (int i : values) {
@@ -58,8 +58,8 @@ public class CombinationSumMock {
            }
 
            if(tmp < target) {
-            res[i] = i;
-            result.add(res);
+               aggregatedRes[i] = i;
+               result.add(aggregatedRes);
            }
        }
        return result;
