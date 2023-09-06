@@ -16,8 +16,6 @@ import java.util.List;
  * [2,6]
  * [1,1,6]
  *
- *
- *
  * Sorted:
  * 1,1,2,5,6,7,10
  *
@@ -32,6 +30,8 @@ import java.util.List;
  *
  * 1,7
  * 1,6,1
+ *
+ * That doesn't work either. Think another solution
  *
  */
 @Data
