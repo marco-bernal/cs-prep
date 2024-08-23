@@ -1,12 +1,13 @@
 package com.mab.mocks.mxbe;
 
-import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
- * Combination SUm
+ * Combination Sum
  * Given an array and a target, find getUsers the combinations that sum the target
  * example:
  * input[10,1,2,6,7,1,5], target 8
@@ -15,53 +16,63 @@ import java.util.List;
  * [1,2,5]
  * [2,6]
  * [1,1,6]
- *
- * Sorted:
- * 1,1,2,5,6,7,10
- *
- * Take the first left number and the last right number and sum them up
- * 1, 10
- * if they > target, then move to the next greater number in the left
- * 1, 7
- * if they match, add that combination to the result,
- * then move to the next lesser number in the left and the next greater in the right
- * 1,6
- *
- *
- * 1,7
- * 1,6,1
- *
- * That doesn't work either. Think another solution
- *
+ *TODO: Explain solution approaches. Enhance with for each loops / streams if possible.
  */
-@Data
+
+/**
+ * FIXME: Implement solution.
+ */
+@Slf4j
 public class CombinationSumMock {
 
    public List<int[]> getCombinations(int[] values, int target) {
-       int tmp = 0;
-       int[] aggregatedRes = new int[values.length];
-       List<int[]> result = new ArrayList<>();
+       List<int[]> results = new ArrayList<>();
+       Arrays.sort(values);
+       int middle = values.length / 2; // 7/2 = 3 (4)
 
-       for (int i : values) {
-           tmp += i;
+       int middleLength = middle + 1;
 
-           if(tmp > target) {
-               tmp = 0;
-               continue;
-           }
+       int[] leftValues = new int[middleLength]; //4
+       int[] rightValues= new int[values.length - middleLength]; //3
+       for (int i=0, j=middleLength; i < middleLength && j < values.length; i++) {
+           if (i <= middle) {
+               leftValues[i] += values[i];
 
-           if (i == target) {
-               int[] res = new int[values.length];
-               res[i] = i;
-               result.add(res);
-               continue;
-           }
+           } else {
+               rightValues[i] += values[i];
 
-           if(tmp < target) {
-               aggregatedRes[i] = i;
-               result.add(aggregatedRes);
            }
        }
-       return result;
+
+       for (int i=0; i < middleLength; i++) {
+           leftValues[i] += values[i];
+           log.info("[leftValues] : {}", leftValues[i]); //OK: [1,1,2,5,0,0,0]
+       }
+       for (int i=middleLength, j=0; i < values.length; i++, j++) {
+           rightValues[j] += values[i];
+           log.info("[rightValues] : {}", rightValues[j]); //OK: [0,0,0,0,6,7,10]
+       }
+
+
+
+       int sum = 0;
+       for (int i=0; i < leftValues.length; i++) {
+           for (int j=0; j < rightValues.length; j++) {
+
+                log.info("[i,j] : [{},{}]", leftValues[i], rightValues[j]);
+
+//               if (leftValues[i] + rightValues[j] < target) {
+//                   sum += leftValues[i] + rightValues[j];
+//
+//
+//                   if (sum == target) {
+//
+//                   }
+//               }
+
+           }
+       }
+
+       return results;
    }
 }
