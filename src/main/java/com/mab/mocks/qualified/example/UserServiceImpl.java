@@ -10,6 +10,7 @@ import java.util.Objects;
 
 import static java.lang.String.format;
 
+//TODO; De;ete interface, since there's only one implementation. Rename service class.
 @Service
 public class UserServiceImpl implements UserService {
 

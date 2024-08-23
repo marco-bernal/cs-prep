@@ -11,6 +11,8 @@ import org.springframework.context.ApplicationContext;
 public class MocksApplication {
 
     public static void main(String[] args) {
+
+        //ToDo: Create tests instead of this.
         ApplicationContext ctx = SpringApplication.run(com.mab.mocks.MocksApplication.class, args);
 
         UserController userController = (UserController) ctx.getBean("userController");
