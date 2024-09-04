@@ -1,11 +1,8 @@
 package com.mab.mocks.algorithms.misc;
 
-import com.mab.mocks.algorithms.model.BalancedResult;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 
 /**
  * Given an unsorted array of any size that might contain positive, zero and negative values.
@@ -20,36 +17,44 @@ import java.util.List;
 class BalancedArray {
 
     //New proposal that seems to solve to problem more efficiently: SOLVED!
-    BalancedResult getBalancedArrays(int[] numbers) {
-        BalancedResult result = new BalancedResult();
-        List<Integer> leftResult = new ArrayList<>();
-        List<Integer> rightResult = new ArrayList<>();
+    List<int[]> getBalancedArrays(int[] numbers) {
+        List<int[]> result = new ArrayList<>();
+        List<Integer> leftValues = new ArrayList<>();
+        List<Integer> rightValues = new ArrayList<>();
 
         int avg = getAverage(numbers);
         int sum = 0;
 
-        for (int i = 0; i < numbers.length; i++) {
-            sum += numbers[i];
+        for (int number : numbers) {
+            sum += number;
 
             if (sum <= avg) {
-                leftResult.add(numbers[i]);
+                leftValues.add(number);
             }
 
             if (sum > avg) {
-                rightResult.add(numbers[i]);
-                sum -= numbers[i];
+                rightValues.add(number);
+                sum -= number;
             }
         }
 
-        result.setLeftList(leftResult);
-        result.setRightList(rightResult);
+        result.add(
+                leftValues.stream()
+                        .mapToInt(Integer::intValue)
+                        .toArray()
+        );
+
+        result.add(
+          rightValues.stream()
+                  .mapToInt(Integer::intValue)
+                  .toArray()
+        );
 
         return result;
     }
 
     private int getAverage(int[] values) {
-        int sum;
-        sum = Arrays.stream(values).sum();
+        int sum = Arrays.stream(values).sum();
         return sum / 2;
     }
 }
