@@ -50,8 +50,9 @@
 * And so on
 
 ### Queue - Deque (Double Ended Queue)
-* Examples of PriorityQueue, PriorityQueue as a Heap and LinkedList as a Queue
-* Examples of ArrayDeque (Replacement of Stack) and LinkedList as deque
+* Examples of ArrayDeque as Queue and Stack.
+* Examples of PriorityQueue, PriorityQueue as a Heap
+* Consider most important methods to do operations with each structure
 
 Reference:
 https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html

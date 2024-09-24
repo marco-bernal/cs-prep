@@ -13,4 +13,5 @@ Add more complexity to showcase
 * Validations
 * Messaging (Consumer / Producer) using Kafka
 * Design Patterns (uServices and GoF ones)
-* 
+
+TODO: Move it to another repository ny itself to practice real world problems.
