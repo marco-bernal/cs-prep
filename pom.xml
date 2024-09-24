@@ -8,11 +8,11 @@
         <version>2.7.14</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.mab.mocks</groupId>
-    <artifactId>mocks</artifactId>
+    <groupId>com.mab.cs_prep</groupId>
+    <artifactId>cs-prep</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mocks</name>
-    <description>Mock interview exercises</description>
+    <name>cs-prep</name>
+    <description>Computer Science prep Algorithms, DS and Mocks for Interviewing for FAANG.</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -76,4 +76,4 @@
 
 </project>
 
-<!-- TODO: Update to Java 22 -->
+<!-- TODO: Update to Java 22 and spring boot 3, remove non needed dependencies -->
