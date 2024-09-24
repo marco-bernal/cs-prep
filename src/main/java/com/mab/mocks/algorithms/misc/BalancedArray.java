@@ -13,7 +13,7 @@ import java.util.List;
  * [-1,1,0,1,0,1] -> [1] [1]
  *
  * TODO: Explain solution approaches. Enhance with for each loops / streams if possible.
- */
+ */ 
 class BalancedArray {
 
     //New proposal that seems to solve to problem more efficiently: SOLVED!
