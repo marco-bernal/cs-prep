@@ -1,4 +1,4 @@
-package com.mab.cs_prep.qualified.example;
+package com.mab.cs_prep.mocks.example;
 
 import com.mab.cs_prep.mocks.example.UserRepository;
 import com.mab.cs_prep.mocks.example.UserService;

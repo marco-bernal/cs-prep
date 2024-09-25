@@ -1,4 +1,4 @@
-package com.mab.cs_prep.qualified.example.util;
+package com.mab.cs_prep.mocks.example.util;
 
 import com.mab.cs_prep.mocks.example.model.User;
 import org.junit.jupiter.api.Test;

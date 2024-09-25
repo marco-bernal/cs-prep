@@ -1,4 +1,4 @@
-package com.mab.cs_prep.mxbe;
+package com.mab.cs_prep.mocks.mxbe;
 
 import com.mab.cs_prep.mocks.mxbe.CombinationSumMock;
 import org.junit.jupiter.api.BeforeEach;
