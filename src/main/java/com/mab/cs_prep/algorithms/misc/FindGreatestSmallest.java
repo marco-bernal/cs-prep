@@ -1,12 +1,6 @@
 package com.mab.cs_prep.algorithms.misc;
 
-
-import com.mab.cs_prep.algorithms.model.Result;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.OptionalInt;
+import java.util.*;
 
 import static java.util.Comparator.comparingInt;
 
@@ -19,20 +13,23 @@ import static java.util.Comparator.comparingInt;
  */
 class FindGreatestSmallest {
 
-    Result getMaxAndMin(int[] values) {
+    int[] getMaxAndMin(int[] values) {
         int smallest = values[0];
         int greatest = values[0];
+        int[] result = new int[2];
 
-        for (int i = 0; i < values.length; i++) {
-            if (values[i] < smallest) {
-                smallest = values[i];
+        for (int value : values) {
+            if (value < smallest) {
+                smallest = value;
+                result[0] = smallest;
             }
-            if (values[i] > greatest) {
-                greatest = values[i];
+            if (value > greatest) {
+                greatest = value;
+                result[1] = greatest;
             }
         }
 
-        return new Result(smallest, greatest);
+        return result;
     }
 
     int[] getMaxAndMinAsArray(int[] values) {

@@ -11,19 +11,20 @@ import java.util.Optional;
 @Component
 public class UserRepository {
 
-    List<User> getUsers() {
+    //ToDo: Make methods package-private
+    public List<User> getUsers() {
         return UserFactory.getMockUsers();
     }
 
-    List<User> getEmptyUsersList() {
+    public List<User> getEmptyUsersList() {
         return Collections.emptyList();
     }
 
-    User createUser(User user) {
+    public User createUser(User user) {
         return UserFactory.getNewUser(user);
     }
 
-    Optional<User> getById(String id) {
+    public Optional<User> getById(String id) {
         Optional<User> userOptional;
 
         if (id.equals("72635")) {

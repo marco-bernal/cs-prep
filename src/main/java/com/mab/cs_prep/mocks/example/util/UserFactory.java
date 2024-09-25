@@ -1,7 +1,5 @@
 package com.mab.cs_prep.mocks.example.util;
 
-
-
 import com.mab.cs_prep.mocks.example.model.Address;
 import com.mab.cs_prep.mocks.example.model.User;
 

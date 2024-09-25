@@ -1,7 +1,7 @@
 package com.mab.cs_prep.mocks.example.util;
 
-
 import com.mab.cs_prep.mocks.example.model.User;
+import lombok.experimental.UtilityClass;
 
 import java.util.Comparator;
 import java.util.List;
@@ -11,15 +11,12 @@ import java.util.stream.Collectors;
 /**
  * Class for sorting, filtering and perform operations on a User Collection
 **/
-
+@UtilityClass
 public class UtilMethods {
-
-    private UtilMethods() {}
 
     // Add static methods, hard to test, but using a wrapper could be a workaround,
     // or using specific libraries to mock'em
-
-    static List<User> getUsersByCityAsc(List<User> users) {
+    public static List<User> getUsersByCityAsc(List<User> users) {
         return users.stream()
                 .sorted(Comparator.comparing(u -> u.getAddress().getCity()))
                 .collect(Collectors.toList());
