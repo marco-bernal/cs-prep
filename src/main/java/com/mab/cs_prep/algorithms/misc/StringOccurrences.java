@@ -41,7 +41,6 @@ public class StringOccurrences {
 
     // Linear space complexity, depends on the size of the input (On)
     int[] getOccurrencesImprovedSolution(String[] strings, String[] queries) {
-        int[] result = new int[queries.length];
         Map<String, Integer> occurrences = new LinkedHashMap<>();
 
         // Adds the query string into a map, adds 0 as default value
@@ -58,15 +57,11 @@ public class StringOccurrences {
             }
         }
 
-        int i = 0;
-        for (Integer value : occurrences.values()) {
-            result[i] = value;
-            i++;
-        }
-
-        return result;
+        return occurrences.values()
+                .stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
     }
-
 
     // Linear space complexity, depends on the size of the input (On)
     List<Integer> getOccurrencesOptimal(String[] strings, String[] queries) {
