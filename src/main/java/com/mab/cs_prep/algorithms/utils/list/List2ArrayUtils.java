@@ -10,8 +10,17 @@ public class List2ArrayUtils {
     /**
      * Converts a String List to a String array.
      */
-    public static String[] listToArray(List<String> strings) {
-        return strings.toArray(String[]::new);
+    public static String[] stringListToStringArray(List<String> strings) {
+        return strings
+                .toArray(String[]::new);
+    }
+
+    /**
+     * Converts an Integer List to an Integer[] array.
+     */
+    public static Integer[] integerListToIntegerArray(List<Integer> integers) {
+        return integers
+                .toArray(Integer[]::new);
     }
 
     /**
