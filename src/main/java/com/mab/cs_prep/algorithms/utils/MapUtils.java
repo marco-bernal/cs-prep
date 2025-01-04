@@ -1,11 +1,11 @@
-package com.mab.cs_prep.algorithms.utils.map;
+package com.mab.cs_prep.algorithms.utils;
 
 import lombok.experimental.UtilityClass;
 
 import java.util.Map;
 
 @UtilityClass
-public class Map2ArrayUtils {
+public class MapUtils {
 
     /**
      * Converts a Map<String,Integer> to an Integer[] array.
@@ -22,6 +22,14 @@ public class Map2ArrayUtils {
         return map.values()
                 .stream()
                 .mapToInt(Integer::intValue)
+                .toArray();
+    }
+
+    public static int[] getKeysFromMap(Map<Integer, Integer> resultMap) {
+        return resultMap.entrySet()
+                .stream()
+                .filter(e -> e.getValue() > 1)
+                .mapToInt(Map.Entry::getKey)
                 .toArray();
     }
 }
