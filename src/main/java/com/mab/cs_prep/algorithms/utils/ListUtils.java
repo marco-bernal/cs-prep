@@ -1,11 +1,11 @@
-package com.mab.cs_prep.algorithms.utils.list;
+package com.mab.cs_prep.algorithms.utils;
 
 import lombok.experimental.UtilityClass;
 
 import java.util.List;
 
 @UtilityClass
-public class List2ArrayUtils {
+public class ListUtils {
 
     /**
      * Converts a String List to a String array.

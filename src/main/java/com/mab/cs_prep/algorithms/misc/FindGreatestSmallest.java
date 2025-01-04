@@ -55,9 +55,10 @@ class FindGreatestSmallest {
         return result;
     }
 
-    private Optional<Integer> getMaxValueFromList(List<Integer> values) {
+    private Integer getMaxValueFromList(List<Integer> values) {
         return values.stream()
-                .reduce(Integer::max);
+                .reduce(Integer::max)
+                .orElse(-1);
     }
 
     private Optional<Integer> getMinValueFromList(List<Integer> values) {
@@ -73,6 +74,12 @@ class FindGreatestSmallest {
     private OptionalInt getMinValueFromArray(int[] values) {
         return Arrays.stream(values)
                 .reduce(Integer::min);
+    }
+
+    private int getMaxIntValueFromArray(int[] values) {
+        return Arrays.stream(values)
+                .reduce(Integer::max)
+                .orElse(-1);
     }
 }
 

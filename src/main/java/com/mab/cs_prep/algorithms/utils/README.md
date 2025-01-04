@@ -51,7 +51,7 @@
 
 ### Queue - Deque (Double Ended Queue)
 * Examples of ArrayDeque as Queue and Stack.
-* Examples of PriorityQueue, PriorityQueue as a Heap
+* Examples of PriorityQueue as Heap.
 * Consider most important methods to do operations with each structure
 
 Reference:
