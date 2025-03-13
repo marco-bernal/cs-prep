@@ -1,4 +1,4 @@
-package com.mab.cs_prep.mocks.ca;
+package com.mab.cs_prep.algorithms.misc;
 
 public class ParenthesisValidator {
 
