@@ -1,4 +1,4 @@
-package com.mab.cs_prep.mocks.mxbe;
+package com.mab.cs_prep.algorithms.misc;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -23,7 +23,7 @@ import java.util.List;
  * FIXME: Implement solution.
  */
 @Slf4j
-public class CombinationSumMock {
+public class CombinationSumTarget {
 
    public List<int[]> getCombinations(int[] values, int target) {
        List<int[]> results = new ArrayList<>();

@@ -1,4 +1,4 @@
-package com.mab.cs_prep.mocks.se;
+package com.mab.cs_prep.algorithms.misc;
 
 /**
  *  Given an entry of a string beverage with their ingredients.
