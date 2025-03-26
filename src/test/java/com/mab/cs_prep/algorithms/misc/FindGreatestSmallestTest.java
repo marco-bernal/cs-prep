@@ -23,8 +23,7 @@ class FindGreatestSmallestTest {
         int[] result = finder.getMaxAndMin(values);
 
         //then
-        assertThat(result[0]).isEqualTo(0);
-        assertThat(result[1]).isEqualTo(89);
+        assertThat(result).containsExactly(0, 89);
     }
 
     @Test
