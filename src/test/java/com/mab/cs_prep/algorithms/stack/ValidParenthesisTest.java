@@ -37,4 +37,40 @@ class ValidParenthesisTest {
         //then
         assertThat(result).isFalse();
     }
+
+    @Test
+    void isValidParenthesis_thirdCase() {
+        //given
+        String input = "()";
+
+        //when
+        boolean result = validParenthesis.isValidParenthesis(input);
+
+        //then
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    void isValidParenthesis_fourthCase() {
+        //given
+        String input = "([])";
+
+        //when
+        boolean result = validParenthesis.isValidParenthesis(input);
+
+        //then
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    void isValidParenthesis_fifthCase() {
+        //given
+        String input = "([)]";
+
+        //when
+        boolean result = validParenthesis.isValidParenthesis(input);
+
+        //then
+        assertThat(result).isFalse();
+    }
 }

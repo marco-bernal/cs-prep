@@ -31,7 +31,13 @@ public class ValidParenthesis {
                 values.push(c);
             }
 
-            if (c.equals(')') || c.equals('}') || c.equals(']')) {
+            else if (c.equals(')') && !values.isEmpty() && values.peek().equals('(')) {
+                values.pop();
+            }
+            else if (c.equals('}') && !values.isEmpty() && values.peek().equals('{')) {
+                values.pop();
+            }
+            else if (c.equals(']') && !values.isEmpty() && values.peek().equals('[')) {
                 values.pop();
             }
         }
