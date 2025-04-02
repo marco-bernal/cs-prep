@@ -35,7 +35,7 @@ import java.util.Deque;
  * Constraints:
  * 1 <= B <= arr.length <= 10^5
  */
-public class ReverseNElements {
+public class ReverseNElementsArray {
 
     public int[] getReversedArray(int[] input, int target) {
         int[] result = new int[input.length];
