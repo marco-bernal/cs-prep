@@ -27,10 +27,19 @@ public class ValidParenthesis {
         Deque<Character> values = new ArrayDeque<>();
 
         for (Character c : string.toCharArray()) {
+            //validate if the character start with a closing parenthesis
+            if (c.equals(')') && values.isEmpty() ||
+                    c.equals('}') && values.isEmpty() ||
+                        c.equals(']') && values.isEmpty()) {
+                    return false;
+            }
+
+            //add opening parenthesis tp the stack
             if (c.equals('(') || c.equals('{') || c.equals('[')) {
                 values.push(c);
             }
 
+            //remove value from the stack if the closing parenthesis matches the opening one
             else if (c.equals(')') && !values.isEmpty() && values.peek().equals('(')) {
                 values.pop();
             }

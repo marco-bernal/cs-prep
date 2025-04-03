@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ReverseNElementsTest {
+class ReverseNElementsArrayTest {
 
-    private ReverseNElements reverseNElements;
+    private ReverseNElementsArray reverseNElementsArray;
 
     @BeforeEach
     void setUp() {
-        reverseNElements = new ReverseNElements();
+        reverseNElementsArray = new ReverseNElementsArray();
     }
 
     @Test
@@ -21,7 +21,7 @@ class ReverseNElementsTest {
         int target = 3;
 
         //when
-        int[] result = reverseNElements.getReversedArray(input, target);
+        int[] result = reverseNElementsArray.getReversedArray(input, target);
 
         //then
         assertThat(result).containsExactly(3, 2, 1, 4, 5);

@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ReverseStringWithStackTest {
+class ReverseStringWithArrayTest {
 
-    private ReverseString reverseString;
+    private ReverseStringWithArray reverseStringWithArray;
 
     @BeforeEach
     void setUp() {
-        reverseString = new ReverseString();
+        reverseStringWithArray = new ReverseStringWithArray();
     }
 
     @Test
@@ -20,7 +20,7 @@ class ReverseStringWithStackTest {
         String input = "whatever";
 
         //when
-        String output = reverseString.reverseString(input);
+        String output = reverseStringWithArray.reverseString(input);
 
         //then
         assertThat(output).isEqualTo("revetahw");

@@ -1,11 +1,11 @@
-package com.mab.cs_prep.ds.stack;
+package com.mab.cs_prep.algorithms.stack;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ReverseStringWithStackTest {
+class ReverseStringWithArrayWithStackTest {
 
     private ReverseStringWithStack reverseStringWithStack;
 
@@ -27,12 +27,24 @@ class ReverseStringWithStackTest {
     }
 
     @Test
-    void getReversedStringWithArrayDeque() {
+    void getReversedStringWithArrayDequeAndStringBuilder() {
         //given
         String name = "samoht";
 
         //when
-        String result = reverseStringWithStack.getReversedStringWithArrayDeque(name);
+        String result = reverseStringWithStack.getReversedStringWithArrayDequeAndStringBuilder(name);
+
+        //then
+        assertThat(result).isEqualTo("thomas");
+    }
+
+    @Test
+    void getReversedStringWithArrayDequeAndCharArray() {
+        //given
+        String name = "samoht";
+
+        //when
+        String result = reverseStringWithStack.getReversedStringWithArrayDequeAndCharArray(name);
 
         //then
         assertThat(result).isEqualTo("thomas");
