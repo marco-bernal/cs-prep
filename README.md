@@ -1,6 +1,6 @@
 ### Computer Science Fundamentals
 
-Repo that is used to practice DSA for interview prep.
+DSA for interview prep.
 
 #### TODO: 
 * Improve old versions by implementing Collections/Streams and enhanced for each loops whenever applies.
