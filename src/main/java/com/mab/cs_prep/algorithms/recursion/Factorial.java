@@ -1,9 +1,17 @@
 package com.mab.cs_prep.algorithms.recursion;
 
-import lombok.extern.slf4j.Slf4j;
-
-//TODO: Remove log, add problem explanation, input, output. Explain solution approaches.
-@Slf4j
+/**
+ * Recursion is a technique used to call a function by itself. Consists of a base case and a recursive case.
+ * MUST have a base case that should end up the loop.
+ * Otherwise, one might face StackOverflow errors.
+ *
+ * Problem: get The factorial of x.
+ * When: x=5
+ * Factorial: (x * x-1)
+ *
+ * getFactorial(5 * 4 * 3 * 2 * 1) 120
+ *
+ * */
 class Factorial {
 
     int getFactorial(int number) {
@@ -12,7 +20,6 @@ class Factorial {
             return 1;
         }//recursive case
         else {
-            log.info("Calling myself. number: {}", number);
             return number * getFactorial(number - 1);
         }
     }

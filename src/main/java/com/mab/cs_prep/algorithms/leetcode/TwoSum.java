@@ -36,13 +36,13 @@ import java.util.Map;
  * Complexity: Quadratic 0(n2)
  *
  * Improved solution:
- * Add a HasMap into the equation for storing values and iterate the array only once.
+ * Add a HashMap into the equation for storing values and iterate the array only once.
  * start with the first element input[0], add a variable diff to compute the difference between the target and input[0]
  * check in the HashMap if the diff value exists. If true: return the key of the HashMap as the index, and the value of i.
  * If it doesn't exist: add the index of input[0] as key and the value.
  * Complexity: Linear O(n)
  *
- * Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+ * Follow-up: Can you come up with an algorithm that is less than O(n^2) time complexity?
  * Yes, by adding a HashMap and iterating the array only once.
  */
 public class TwoSum {
@@ -74,6 +74,7 @@ public class TwoSum {
         return result;
     }
 
+    //TODO: Refactor. No need to use a HashMap. Implement the same idea with a HashSet.
     public int[] getTwoSumValuesImproved(int[] input, int target) {
         Map<Integer, Integer> hashMap = new HashMap<>();
         int[] result = new int[2];

@@ -15,7 +15,10 @@ import java.util.*;
  *
  * Solution:
  * Naive approach: Sort both strings and compare them to see if they are equal.
- * O(n) linear
+ * O(n log n) because of the sorting
+ *
+ * Optimal solution:
+ *
  *
  ********************************
  * Second part:
@@ -38,6 +41,9 @@ import java.util.*;
  */
 public class Anagram {
 
+    //TODO: Add optimal solution O(n)
+
+    // O(n log n)
     boolean isAnagram(String string1, String string2) {
         //validate edge cases
         if (string1.length() != string2.length()) {
@@ -56,7 +62,7 @@ public class Anagram {
         char[] array1 = string1.toCharArray();
         char[] array2 = string2.toCharArray();
 
-        //sort arrays O(log n)
+        //sort arrays O(n log n)
         Arrays.sort(array1);
         Arrays.sort(array2);
 

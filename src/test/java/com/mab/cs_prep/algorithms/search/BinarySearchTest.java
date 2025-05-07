@@ -20,7 +20,7 @@ class BinarySearchTest {
         int[] sortedArray = {7, 20, 31, 54, 69, 81, 100};
 
         //where
-        int position = binarySearch.binarySearch(81, sortedArray);
+        int position = binarySearch.binarySearch(sortedArray, 81);
 
         //then
         assertThat(position).isEqualTo(5);
@@ -32,7 +32,7 @@ class BinarySearchTest {
         int[] sortedArray = {7, 20, 31, 54, 69, 81, 100};
 
         //where
-        int position = binarySearch.binarySearch(20, sortedArray);
+        int position = binarySearch.binarySearch(sortedArray, 20);
 
         //then
         assertThat(position).isEqualTo(1);
@@ -44,10 +44,9 @@ class BinarySearchTest {
         int[] sortedArray = {7, 20, 31, 54, 69, 81, 100};
 
         //where
-        int position = binarySearch.binarySearch(54, sortedArray);
+        int position = binarySearch.binarySearch(sortedArray, 54);
 
         //then
         assertThat(position).isEqualTo(3);
     }
-
 }

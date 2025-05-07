@@ -18,7 +18,7 @@ import java.util.stream.Stream;
  **/
 class CommonItems {
 
-    //Brute force approach O(n^2) Quadratic. Not efficient
+    //Brute force approach O(n^2) Quadratic. Horrible
     boolean hasCommonItems(String[] input1, String[] input2) {
 
         for (int i = 0; i < input1.length; i++) {
@@ -33,7 +33,7 @@ class CommonItems {
         return false;
     }
 
-    //Refactored solution, more efficient O(n) Linear
+    //Refactored solution, more efficient solution O(n) Linear
     boolean hasCommonItemsRefactored(String[] input1, String[] input2) {
         // merges both input arrays into one
         String[] joinArray = joinArrays(input1, input2);
@@ -48,6 +48,9 @@ class CommonItems {
         }
         return false;
     }
+
+    //TODO: Add another solution with List<Character> and validate against it. Without joining the arrays.
+    // Has to be O(n)
 
     private String[] joinArrays(String[] input1, String[] input2) {
         return Stream.concat(Arrays.stream(input1), Arrays.stream(input2))
