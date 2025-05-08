@@ -7,10 +7,17 @@ package com.mab.cs_prep.algorithms.search;
  * to search is greater or not, depending on that discards either the left or right exceeding values.
  *
  * O(log n)
- *
  */
 class BinarySearch {
 
+    /**
+     * Finds an element by implementing the Binary Search algorithm. Use this one!
+     * Important note is the input array MUST be sorted.
+     *
+     * @param sortedArray input array.
+     * @param valueToSearch x value to be found.
+     * @return index of the value to search.
+     */
     int binarySearch(int[] sortedArray, int valueToSearch) {
 
         int length = sortedArray.length;
@@ -21,20 +28,35 @@ class BinarySearch {
             // Discards first half of the array, and updates the middle index.
             if (valueToSearch > sortedArray[middle]) {
                 //computes new index for middle. This is the key.
-                middle += (length - middle) / 2;
-            }
-
-            // Discards second half of the array, and updates the middle index.
-            if (valueToSearch < sortedArray[middle]) {
+                middle = middle + (length - middle) / 2;
+            } // Discards second half of the array, and updates the middle index.
+            else if (valueToSearch < sortedArray[middle]) {
                 middle = middle / 2;
-            }
-
-            // If number and middle are equal, returns the index.
-            if (valueToSearch == sortedArray[middle]) {
+            } // If number and middle are equal, returns the index.
+            else if (valueToSearch == sortedArray[middle]) {
                 return middle;
             }
         }
+        return -1;
+    }
 
+
+    int anotherBinarySearch(int[] sortedArray, int valueToSearch) {
+        int p1 = 0;
+        int p2 = sortedArray.length;
+
+        while (p1 < p2) {
+
+            int middle = (p1 + p2) / 2;
+
+            if (valueToSearch < sortedArray[middle]) {
+             p2 = middle - 1;
+            } else if (valueToSearch > sortedArray[middle]) {
+                p1 = middle + 1;
+            } else {
+                return middle;
+            }
+        }
         return -1;
     }
 }
