@@ -6,6 +6,9 @@ package com.mab.cs_prep.algorithms.search;
  * Binary search works by dividing the given array exactly in the middle, and validating if the value
  * to search is greater or not, depending on that discards either the left or right exceeding values.
  *
+ * The key is to update the middle pointer to the left or right, depending on the value to search
+ * and the value of the middle pointer.
+ *
  * O(log n)
  */
 class BinarySearch {
@@ -23,16 +26,15 @@ class BinarySearch {
         int length = sortedArray.length;
         int middle = length / 2;
 
-        for (int i = 0; i < length; i++) {
-
-            // Discards first half of the array, and updates the middle index.
+        for (int i : sortedArray) {
+            // Discards first half of the array, and updates the middle pointer.
             if (valueToSearch > sortedArray[middle]) {
                 //computes new index for middle. This is the key.
-                middle = middle + (length - middle) / 2;
-            } // Discards second half of the array, and updates the middle index.
+                middle = (length + middle) / 2;
+            } // Discards second half of the array, and updates the middle pointer.
             else if (valueToSearch < sortedArray[middle]) {
                 middle = middle / 2;
-            } // If number and middle are equal, returns the index.
+            } // If number and middle pointer are equal, returns the index.
             else if (valueToSearch == sortedArray[middle]) {
                 return middle;
             }
@@ -40,7 +42,7 @@ class BinarySearch {
         return -1;
     }
 
-
+    // Don't use this version
     int anotherBinarySearch(int[] sortedArray, int valueToSearch) {
         int p1 = 0;
         int p2 = sortedArray.length;
