@@ -25,5 +25,4 @@ class FactorialTest {
         //then
         assertThat(result).isEqualTo(120);
     }
-
 }

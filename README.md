@@ -3,7 +3,8 @@
 DSA for interview prep.
 
 #### TODO: 
-* Improve old versions by implementing Collections/Streams and enhanced for each loops whenever applies.
+* Check all algorithms and find out whether they can be improved, by implementing Collections/Streams, 
+ enhanced loops, improving time-space complexity or using/replacing data structures.
 * Group classes in the algorithms package based on the 6-8 patters to solve them:
     * Slide window, 2 pointers, subset and so on.
 * For all the algorithms:

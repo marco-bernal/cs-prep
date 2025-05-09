@@ -21,6 +21,9 @@ import java.util.List;
 
 /**
  * FIXME: Implement solution.
+ * Solution combines backtracking with recursion to add or skip an element into the list of results.
+ *
+ *
  */
 @Slf4j
 public class CombinationSumTarget {
