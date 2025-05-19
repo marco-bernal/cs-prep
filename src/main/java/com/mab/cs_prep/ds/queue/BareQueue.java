@@ -1,5 +1,6 @@
 package com.mab.cs_prep.ds.queue;
 
+//TODO: Add queue implementing a node (Already in old package). Double check it, and improve it if needed.
 /**
  * Pretty basic implementation of a Queue.
  * FIFO (First In First Out)

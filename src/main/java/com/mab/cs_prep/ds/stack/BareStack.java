@@ -1,5 +1,6 @@
 package com.mab.cs_prep.ds.stack;
 
+//TODO: Add stack implementing a node (Already in old package). Double check it, and improve it if needed.
 /**
  * Pretty basic implementation of a Stack.
  * LIFO (Last In First Out)
